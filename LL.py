@@ -54,10 +54,25 @@ class LinkedList:
             self.head = new_node
         self.length += 1
         return True
+    
+    def pop_fitst(self):
+        if self.length == 0:
+            return None
+        temp = self.head
+        self.head = self.head.next 
+        temp.next = None
+        self.length -= 1 
+        if self.lengh == 0:
+            self.tail = None 
+        return temp
+    
+    def get(self, index):
+        
+
+
 
 my_linked_list = LinkedList(2)
-my_linked_list.append(3)
+my_linked_list.append(1)
 
-my_linked_list.prepend(1)
 
 my_linked_list.print_list()
